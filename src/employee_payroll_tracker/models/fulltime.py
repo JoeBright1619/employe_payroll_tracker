@@ -1,0 +1,1 @@
+"""Subclass: overrides salary computation (e.g., base + bonus - taxes)."""

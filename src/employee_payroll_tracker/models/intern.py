@@ -1,0 +1,1 @@
+"""Subclass: may include stipend, possible tax exemptions."""

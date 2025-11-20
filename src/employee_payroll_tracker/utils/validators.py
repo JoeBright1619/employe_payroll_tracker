@@ -1,0 +1,1 @@
+"""Functions like is_valid_salary(), is_valid_hours()."""

@@ -1,0 +1,1 @@
+"""Subclass: computation based on hours worked × rate."""
