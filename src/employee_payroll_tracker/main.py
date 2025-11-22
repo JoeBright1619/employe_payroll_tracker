@@ -1,4 +1,11 @@
-"""
-Menu-driven console application, loops through choices:
-Add Employee, Compute Salary, View Report, Exit.
-"""
+# src/employee_payroll_tracker/main.py
+
+from employee_payroll_tracker.services.payroll_service import PayrollService
+from employee_payroll_tracker.utils.menus.main_menu import show_main_menu
+
+def main():
+    payroll = PayrollService()
+    show_main_menu(payroll)
+
+if __name__ == "__main__":
+    main()

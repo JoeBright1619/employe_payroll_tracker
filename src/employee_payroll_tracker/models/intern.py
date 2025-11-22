@@ -1,9 +1,9 @@
 from .employee import Employee
 
 class Intern(Employee):
-    def __init__(self, name: str, stipend: float):
-        super().__init__(name, "Intern")
-        self.stipend = stipend
+    def __init__(self, name: str, employee_id: int, monthly_stipend: float):
+        super().__init__(name, employee_id,"Intern")
+        self.stipend = monthly_stipend
 
     @property
     def stipend(self):

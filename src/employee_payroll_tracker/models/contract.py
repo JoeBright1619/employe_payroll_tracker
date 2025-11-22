@@ -1,8 +1,8 @@
 from .employee import Employee
 
 class ContractEmployee(Employee):
-    def __init__(self, name: str, hourly_rate: float, hours_worked: float):
-        super().__init__(name, "Contract")
+    def __init__(self, name: str, employee_id: int, hourly_rate: float, hours_worked: float):
+        super().__init__(name, employee_id, "Contract")
         self.hourly_rate = hourly_rate
         self.hours_worked = hours_worked
 

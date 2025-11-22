@@ -11,15 +11,11 @@ def add_fulltime_menu(payroll):
     name = input("Name: ")
     emp_id = input("Employee ID: ")
     base_salary = validate_float("Base salary: ")
-    bonus = validate_float("Bonus: ")
-    taxes = validate_float("Tax rate (%): ")
 
     emp = FullTimeEmployee(
         name=name,
         employee_id=emp_id,
         base_salary=base_salary,
-        bonus=bonus,
-        tax_rate=taxes,
     )
 
     payroll.add_employee(emp)
