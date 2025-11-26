@@ -1,10 +1,10 @@
 # src/employee_payroll_tracker/utils/menus/add_employee_menu.py
 
-from employee_payroll_tracker.utils.validators import validate_float
-from employee_payroll_tracker.utils.helpers import pause
-from employee_payroll_tracker.models.fulltime import FullTimeEmployee
-from employee_payroll_tracker.models.contract import ContractEmployee
-from employee_payroll_tracker.models.intern import Intern
+from ..validators import validate_float
+from ..helpers import pause
+from ...models.fulltime import FullTimeEmployee
+from ...models.contract import ContractEmployee
+from ...models.intern import Intern
 
 
 def add_fulltime_menu(payroll):

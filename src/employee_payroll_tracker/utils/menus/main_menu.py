@@ -1,5 +1,5 @@
-from employee_payroll_tracker.utils.helpers import clear_screen, pause
-from employee_payroll_tracker.utils.menus.add_employee_menu import (
+from ..helpers import clear_screen, pause
+from ..menus.add_employee_menu import (
     add_fulltime_menu,
     add_contract_menu,
     add_intern_menu,
