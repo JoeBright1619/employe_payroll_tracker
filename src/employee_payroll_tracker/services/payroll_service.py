@@ -1,5 +1,8 @@
 class PayrollService:
+    """Facade responsible for storing employees and computing payroll."""
+
     def __init__(self):
+        """Initialize the in-memory collections used by the service."""
         self.employees = []          # list of Employee objects
         self.employee_map = {}       # id -> Employee object
 
@@ -26,7 +29,7 @@ class PayrollService:
         return self.employee_map.get(employee_id)
 
     def compute_all_salaries(self):
-        """Polymorphic salary computation."""
+        """Return a mapping of employee IDs to their computed salaries."""
         payroll = {}
 
         for employee in self.employees:

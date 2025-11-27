@@ -8,6 +8,7 @@ from ...models.intern import Intern
 
 
 def add_fulltime_menu(payroll):
+    """Prompt for full-time details and persist the resulting employee."""
     name = input("Name: ")
     emp_id = input("Employee ID: ")
     base_salary = validate_float("Base salary: ")
@@ -24,6 +25,7 @@ def add_fulltime_menu(payroll):
 
 
 def add_contract_menu(payroll):
+    """Capture contract-specific fields and add the employee to payroll."""
     name = input("Name: ")
     emp_id = input("Employee ID: ")
     hourly_rate = validate_float("Hourly rate: ")
@@ -42,6 +44,7 @@ def add_contract_menu(payroll):
 
 
 def add_intern_menu(payroll):
+    """Capture intern information and record them in the payroll system."""
     name = input("Name: ")
     emp_id = input("Employee ID: ")
     stipend = validate_float("Monthly stipend: ")

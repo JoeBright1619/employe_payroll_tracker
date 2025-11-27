@@ -6,6 +6,7 @@ from ..menus.add_employee_menu import (
 )
 
 def show_main_menu(payroll):
+    """Display the interactive menu loop until the user exits."""
     while True:
         clear_screen()
         print("=== Employee Payroll Tracker ===")
@@ -37,6 +38,7 @@ def show_main_menu(payroll):
 
 
 def view_employees(payroll):
+    """Render the current employee list in a simple table."""
     clear_screen()
     print("--- Employee List ---")
 
@@ -50,16 +52,26 @@ def view_employees(payroll):
 
 
 def generate_report(payroll):
+    """Display an aggregated payroll report in tabular form."""
     clear_screen()
-    print("--- Payroll Report ---")
+    print("===== PAYROLL REPORT =====\n")
     report = payroll.generate_payroll_report()
 
     if not report:
-        print("No employees to show.")
-    else:
-        for item in report:
-            print(
-                f"{item['id']} | {item['name']} | {item['role']} | ${item['salary']}"
-            )
+        print("No employees to show.\n")
+        pause()
+        return
 
+    # table header
+    print(f"{'ID':<5} {'Name':<20} {'Role':<15} {'Salary (RWF)':>15}")
+    print("-" * 60)
+
+    # table rows
+    for item in report:
+        print(
+            f"{item['id']:<5} {item['name']:<20} {item['role']:<15} {item['salary']:>15,.2f}"
+        )
+
+    print()
     pause()
+
